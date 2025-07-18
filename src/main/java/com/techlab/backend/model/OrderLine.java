@@ -2,11 +2,21 @@ package com.techlab.backend.model;
 
 import java.util.Objects;
 
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "order_lines")
 public class OrderLine {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")    
     private Long id;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "product_id", nullable = false)
     private Product product;
+    
     private int quantity;
 
     public OrderLine() {

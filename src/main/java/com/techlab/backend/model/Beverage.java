@@ -1,7 +1,11 @@
 package com.techlab.backend.model;
 
 import java.util.Objects;
+import jakarta.persistence.*;
 
+
+@Entity
+@Table(name = "beverages") 
 public class Beverage extends Product {
 
     private double volumeInLiters;

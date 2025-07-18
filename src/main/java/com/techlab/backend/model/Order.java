@@ -2,9 +2,19 @@ package com.techlab.backend.model;
 
 import java.util.List;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "orders") 
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "order_id")
     private List<OrderLine> orderLines;
 
     public Order() {

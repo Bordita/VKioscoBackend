@@ -1,7 +1,10 @@
 package com.techlab.backend.model;
 
 import java.util.Objects;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "foods") 
 public class Food extends Product {
 
     private String expirationDate;

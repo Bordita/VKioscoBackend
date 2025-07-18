@@ -2,10 +2,17 @@ package com.techlab.backend.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import jakarta.persistence.*;
 
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Product implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
     private String name;
     private double price;
     private int stock;
