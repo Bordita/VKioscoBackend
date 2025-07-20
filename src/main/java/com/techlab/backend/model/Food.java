@@ -14,6 +14,11 @@ public class Food extends Product {
         this.expirationDate = expirationDate;
     }
 
+    public Food(String name, double price, int stock, String descripcion, String imagen, String expirationDate) {
+        super(name, price, stock, descripcion, imagen);
+        this.expirationDate = expirationDate;
+    }
+
     public Food() {
         super();
     }

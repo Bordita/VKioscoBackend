@@ -12,7 +12,9 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
-.target
+.idea/
+
+target/
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -160,3 +162,5 @@ replay_pid*
 # Ignore all local history of files
 .history
 .ionide
+
+

@@ -15,6 +15,11 @@ public class Beverage extends Product {
         this.volumeInLiters = volumeInLiters;
     }
 
+    public Beverage(String name, double price, int stock, String descripcion, String imagen, double volumeInLiters) {
+        super(name, price, stock, descripcion, imagen);
+        this.volumeInLiters = volumeInLiters;
+    }
+
     public Beverage() {
         super();
     }
